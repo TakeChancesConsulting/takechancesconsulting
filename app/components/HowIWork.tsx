@@ -82,7 +82,7 @@ export default function HowIWork() {
 
               <div className="relative z-10">
                 <p className="text-2xl md:text-3xl font-playfair leading-relaxed mb-8">
-                  &ldquo;I work in partnership with founders and leadership teams, as an independent consultant.&rdquo;
+                  &ldquo;I work with business leaders, founders, HR leaders and their teams, as an independent consultant.&rdquo;
                 </p>
 
                 {/* Approach pills */}

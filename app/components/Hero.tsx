@@ -171,7 +171,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden bg-gray-100 shadow-2xl pointer-events-auto">
                 <Image
-                  src="/hero-image.jpg"
+                  src="/hero.jpg"
                   alt="Professional consulting"
                   fill
                   className="object-cover"

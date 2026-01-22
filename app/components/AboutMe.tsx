@@ -36,14 +36,14 @@ export default function AboutMe() {
             className="col-span-12 md:col-span-5 row-span-3 relative rounded-3xl overflow-hidden group"
           >
             <Image
-              src="/hero-image.jpg"
+              src="/about-me.jpg"
               alt="About me"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-white font-playfair text-2xl">Hi, I&apos;m here to help you take chances.</p>
+              <p className="text-white font-playfair text-2xl">Rethink HR & People Strategies. Take Chances.</p>
             </div>
             {/* Fallback */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700 -z-10" />
@@ -88,18 +88,19 @@ export default function AboutMe() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="col-span-12 md:col-span-7 row-span-2 bg-white rounded-3xl p-8 border border-gray-200"
+            className="col-span-12 md:col-span-7 row-span-1 bg-white rounded-3xl p-8 border border-gray-200"
           >
             <p className="text-xl lg:text-2xl text-gray-700 font-inter leading-relaxed mb-6">
               My career has spanned{" "}
               <span className="text-teal-600 font-medium">HR business partnering</span>,{" "}
               <span className="text-teal-600 font-medium">people and organisation development</span>,{" "}
+              <span className="text-teal-600 font-medium">talent management</span>,{" "}
               <span className="text-teal-600 font-medium">HR transformation</span>,{" "}
               <span className="text-teal-600 font-medium">organisational culture change</span> and{" "}
               <span className="text-teal-600 font-medium">leadership development</span>.
             </p>
             <div className="flex flex-wrap gap-2">
-              {["HR Partnering", "Org Development", "Transformation", "Culture", "Leadership"].map((tag) => (
+              {["HR Partnering", "Org Development", "Talent Management", "Transformation", "Leadership"].map((tag) => (
                 <span key={tag} className="px-4 py-2 bg-gray-100 rounded-full text-sm text-gray-600 font-inter">
                   {tag}
                 </span>
@@ -163,26 +164,10 @@ export default function AboutMe() {
               <p className="text-xl lg:text-2xl leading-relaxed mb-6">
                 I invest in <span className="text-teal-400">social enterprises</span> that widen 
                 access to meaningful work. I&apos;m passionate about supporting people who&apos;ve 
-                been out of the workforce to find new opportunities.
+                been out of the workforce to find new opportunities. Contact me if you are interested in mentoring and outreach organisations that I work with
               </p>
               
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="col-span-6 md:col-span-4 row-span-2 relative rounded-3xl overflow-hidden"
-          >
-            <Image
-              src="/hero-image.jpg"
-              alt="Secondary photo"
-              fill
-              className="object-cover"
-            />
-            {/* Fallback */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-cyan-500 -z-10" />
           </motion.div>
 
         </div>
