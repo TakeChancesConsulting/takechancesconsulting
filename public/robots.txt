@@ -1,0 +1,11 @@
+# robots.txt for Take Chances Consulting
+# https://takechancesconsulting.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://takechancesconsulting.com/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1

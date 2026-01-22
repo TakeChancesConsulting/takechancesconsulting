@@ -8,8 +8,9 @@ import Image from "next/image";
 function InteractiveGrid() {
   const [hoveredCell, setHoveredCell] = useState<number | null>(null);
   
-  const cols = 20;
-  const rows = 12;
+  // Fewer cells on mobile for better performance
+  const cols = typeof window !== 'undefined' && window.innerWidth < 768 ? 10 : 20;
+  const rows = typeof window !== 'undefined' && window.innerWidth < 768 ? 8 : 12;
   const cells = Array.from({ length: cols * rows }, (_, i) => i);
 
   return (
@@ -62,8 +63,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/50 pointer-events-none" />
 
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 pt-32 pb-16 pointer-events-none">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12 pt-24 sm:pt-32 pb-12 sm:pb-16 pointer-events-none">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           
           {/* Left Column - Text Content */}
           <div className="flex flex-col items-start text-left">
@@ -72,11 +73,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 text-gray-900"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 text-gray-900"
             >
               Transform Your
               <br />
-              <span className="relative inline-block mt-2">
+              <span className="relative inline-block mt-1 sm:mt-2">
                 <span className="relative z-10 text-teal-600">
                   Vision Into Reality
                 </span>
@@ -84,7 +85,7 @@ export default function Hero() {
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.8, delay: 0.7 }}
-                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-teal-400 to-teal-600 origin-left rounded-full"
+                  className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-teal-600 origin-left rounded-full"
                 />
               </span>
             </motion.h1>
@@ -94,7 +95,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-600 font-inter max-w-xl mb-10 leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-gray-600 font-inter max-w-xl mb-6 sm:mb-10 leading-relaxed"
             >
               Expert consulting services designed to help you navigate challenges,
               seize opportunities, and achieve{" "}
@@ -106,19 +107,19 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
             >
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-8 py-4 bg-teal-600 hover:bg-teal-700 rounded-full font-inter font-semibold text-white overflow-hidden shadow-lg shadow-teal-600/25 transition-all pointer-events-auto"
+                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-teal-600 hover:bg-teal-700 rounded-full font-inter font-semibold text-white overflow-hidden shadow-lg shadow-teal-600/25 transition-all pointer-events-auto text-center text-sm sm:text-base"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center justify-center gap-2">
                   Book a Consultation
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 transition-transform group-hover:translate-x-1"
+                    className="h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -133,16 +134,16 @@ export default function Hero() {
                 </span>
               </motion.a>
               <motion.a
-                href="#services"
+                href="#what-i-do"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="group px-8 py-4 rounded-full font-inter font-semibold text-gray-700 border-2 border-gray-300 hover:border-teal-500 hover:text-teal-600 transition-all bg-white/80 backdrop-blur-sm pointer-events-auto"
+                className="group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-inter font-semibold text-gray-700 border-2 border-gray-300 hover:border-teal-500 hover:text-teal-600 transition-all bg-white/80 backdrop-blur-sm pointer-events-auto text-center text-sm sm:text-base"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   Explore Services
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 opacity-0 -ml-5 transition-all group-hover:opacity-100 group-hover:ml-0"
+                    className="h-4 w-4 sm:h-5 sm:w-5 opacity-0 -ml-5 transition-all group-hover:opacity-100 group-hover:ml-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -164,21 +165,21 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative flex items-center justify-center lg:justify-end"
+            className="relative flex items-center justify-center lg:justify-end order-first lg:order-last"
           >
-            <div className="relative w-full max-w-lg lg:max-w-xl aspect-square">
+            <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-xl aspect-square">
 
               {/* Image container */}
-              <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden bg-gray-100 shadow-2xl pointer-events-auto">
+              <figure className="relative z-10 w-full h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-gray-100 shadow-xl sm:shadow-2xl pointer-events-auto">
                 <Image
                   src="/hero.jpg"
-                  alt="Professional consulting"
+                  alt="Take Chances Consulting - Expert HR and people strategy consultant helping organisations transform their vision into reality"
                   fill
                   className="object-cover"
                   priority
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 448px, 576px"
                 />
-
-              </div>
+              </figure>
             </div>
           </motion.div>
         </div>
@@ -188,9 +189,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-20"
+          className="mt-12 sm:mt-16 lg:mt-20"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 p-6 md:p-8 rounded-3xl bg-white/70 backdrop-blur-sm border border-gray-200 shadow-sm pointer-events-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-white/70 backdrop-blur-sm border border-gray-200 shadow-sm pointer-events-auto">
             {[
               { value: "10+", label: "Years Experience" },
               { value: "200+", label: "Projects Delivered" },
@@ -204,10 +205,10 @@ export default function Hero() {
                 transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
                 className="text-center group cursor-default"
               >
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-600 font-playfair transition-transform group-hover:scale-105">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-teal-600 font-playfair transition-transform group-hover:scale-105">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-gray-500 font-inter mt-2">
+                <div className="text-xs sm:text-sm md:text-base text-gray-500 font-inter mt-1 sm:mt-2">
                   {stat.label}
                 </div>
               </motion.div>

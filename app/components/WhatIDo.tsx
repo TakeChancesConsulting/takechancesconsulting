@@ -69,11 +69,11 @@ function ServiceCard({
     >
       {/* Card */}
       <div
-        className={`relative overflow-hidden rounded-3xl ${service.bgColor} border border-gray-100 p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-teal-100/50 cursor-pointer h-full flex flex-col`}
+        className={`relative overflow-hidden rounded-2xl sm:rounded-3xl ${service.bgColor} border border-gray-100 p-5 sm:p-8 lg:p-10 transition-all duration-500 hover:shadow-xl hover:shadow-teal-100/50 cursor-pointer h-full flex flex-col`}
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {/* Number watermark */}
-        <span className="absolute -top-4 -right-4 text-[120px] font-playfair font-bold text-gray-900/[0.03] select-none">
+        <span className="absolute -top-4 -right-4 text-[80px] sm:text-[120px] font-playfair font-bold text-gray-900/[0.03] select-none">
           {service.number}
         </span>
 
@@ -81,20 +81,20 @@ function ServiceCard({
         <motion.div
           whileHover={{ rotate: [0, -10, 10, 0] }}
           transition={{ duration: 0.5 }}
-          className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center mb-6`}
+          className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl ${service.iconBg} flex items-center justify-center mb-4 sm:mb-6`}
         >
-          <IconComponent className={`w-8 h-8 ${service.iconColor}`} strokeWidth={1.5} />
+          <IconComponent className={`w-6 h-6 sm:w-8 sm:h-8 ${service.iconColor}`} strokeWidth={1.5} />
         </motion.div>
 
 
 
         {/* Title */}
-        <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
           {service.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 font-inter leading-relaxed mb-4 flex-grow">
+        <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed mb-3 sm:mb-4 flex-grow">
           {service.description}
         </p>
 
@@ -108,17 +108,17 @@ function ServiceCard({
           transition={{ duration: 0.3 }}
           className="overflow-hidden"
         >
-          <p className="text-gray-600 font-inter leading-relaxed mb-6 pt-2 border-t border-gray-200">
+          <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed mb-4 sm:mb-6 pt-2 border-t border-gray-200">
             {service.extra}
           </p>
         </motion.div>
 
         {/* Keywords */}
-        <div className="flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
           {service.keywords.map((keyword) => (
             <span
               key={keyword}
-              className="px-3 py-1 rounded-full bg-white/80 text-gray-600 text-sm font-inter border border-gray-200/50"
+              className="px-2.5 sm:px-3 py-1 rounded-full bg-white/80 text-gray-600 text-xs sm:text-sm font-inter border border-gray-200/50"
             >
               {keyword}
             </span>
@@ -126,19 +126,19 @@ function ServiceCard({
         </div>
 
         {/* Expand indicator */}
-        <div className="flex items-center gap-2 mt-6 text-teal-600 font-inter text-sm">
+        <div className="flex items-center gap-2 mt-4 sm:mt-6 text-teal-600 font-inter text-xs sm:text-sm">
           <span>{isExpanded ? "Show less" : "Read more"}</span>
           <motion.div
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
-            <ChevronDown className="w-4 h-4" />
+            <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </motion.div>
         </div>
 
         {/* Decorative corner */}
         <div
-          className={`absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl ${service.color} opacity-10 rounded-tl-full`}
+          className={`absolute bottom-0 right-0 w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-tl ${service.color} opacity-10 rounded-tl-full`}
         />
       </div>
     </motion.div>
@@ -149,7 +149,7 @@ export default function WhatIDo() {
   return (
     <section
       id="what-i-do"
-      className="relative py-24 lg:py-32 bg-gray-50 overflow-hidden"
+      className="relative py-16 sm:py-24 lg:py-32 bg-gray-50 overflow-hidden"
     >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -168,15 +168,15 @@ export default function WhatIDo() {
         </svg>
       </div>
 
-      <div className="relative container mx-auto px-6 lg:px-12">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 sm:mb-16">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block text-teal-600 font-inter text-sm tracking-widest uppercase mb-4"
+            className="inline-block text-teal-600 font-inter text-sm tracking-widest uppercase mb-3 sm:mb-4"
           >
             Services
           </motion.span>
@@ -186,7 +186,7 @@ export default function WhatIDo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6"
           >
             What I{" "}
             <span className="relative inline-block">
@@ -196,7 +196,7 @@ export default function WhatIDo() {
                 whileInView={{ width: "100%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute -bottom-2 left-0 h-3 bg-teal-200/60 -z-10"
+                className="absolute -bottom-1 sm:-bottom-2 left-0 h-2 sm:h-3 bg-teal-200/60 -z-10"
               />
             </span>
           </motion.h2>
@@ -206,16 +206,16 @@ export default function WhatIDo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-gray-600 font-inter"
+            className="text-base sm:text-xl text-gray-600 font-inter"
           >
             Three interconnected areas where I help organisations and their
-            leaders thrive. <span className="text-teal-600">Click each card</span> to
+            leaders thrive. <span className="text-teal-600">Tap each card</span> to
             learn more.
           </motion.p>
         </div>
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch">
           {services.map((service, index) => (
             <ServiceCard key={service.number} service={service} index={index} />
           ))}
@@ -227,17 +227,17 @@ export default function WhatIDo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-10 sm:mt-16 text-center"
         >
-          <p className="text-gray-500 font-inter mb-4">
+          <p className="text-sm sm:text-base text-gray-500 font-inter mb-3 sm:mb-4">
             Not sure which area fits your needs?
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 text-teal-600 font-inter font-semibold hover:text-teal-700 transition-colors group"
+            className="inline-flex items-center gap-2 text-teal-600 font-inter font-semibold hover:text-teal-700 transition-colors group text-sm sm:text-base"
           >
             Let&apos;s have a conversation
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
           </a>
         </motion.div>
       </div>
