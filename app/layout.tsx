@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   // Basic metadata
   title: {
-    default: "Take Chances Consulting | HR & People Strategy Consulting",
+    default: "Take Chances Consulting | Rethink HR & People Strategies",
     template: "%s | Take Chances Consulting",
   },
   description:
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: siteUrl,
     siteName: "Take Chances Consulting",
-    title: "Take Chances Consulting | HR & People Strategy Consulting",
+    title: "Take Chances Consulting | Rethink HR & People Strategies",
     description:
-      "Expert HR and people strategy consulting with 25+ years of experience. Transform your organisation with evidence-based people and organisation development.",
+      "Rethink HR & People Strategies. Take Chances. Expert consulting with 25+ years of experience in HR transformation, leadership development, and organisational change.",
     images: [
       {
         url: `${siteUrl}/hero.jpg`,
@@ -81,9 +81,9 @@ export const metadata: Metadata = {
   // Twitter Card metadata
   twitter: {
     card: "summary_large_image",
-    title: "Take Chances Consulting | HR & People Strategy Consulting",
+    title: "Take Chances Consulting | Rethink HR & People Strategies",
     description:
-      "Expert HR and people strategy consulting with 25+ years of experience. Transform your organisation with evidence-based people and organisation development.",
+      "Rethink HR & People Strategies. Take Chances. Expert consulting with 25+ years of experience in HR transformation, leadership development, and organisational change.",
     images: [`${siteUrl}/hero.jpg`],
   },
 

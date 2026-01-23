@@ -75,11 +75,13 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 text-gray-900"
             >
-              Transform Your
+              Rethink HR &
+              <br />
+              People Strategies.
               <br />
               <span className="relative inline-block mt-1 sm:mt-2">
                 <span className="relative z-10 text-teal-600">
-                  Vision Into Reality
+                  Take Chances.
                 </span>
                 <motion.span
                   initial={{ scaleX: 0 }}
@@ -184,35 +186,35 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Stats - Full width below */}
+        {/* Stats - Minimal inline design */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-12 sm:mt-16 lg:mt-20"
+          className="mt-10 sm:mt-14 lg:mt-16 pointer-events-auto"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl bg-white/70 backdrop-blur-sm border border-gray-200 shadow-sm pointer-events-auto">
-            {[
-              { value: "10+", label: "Years Experience" },
-              { value: "200+", label: "Projects Delivered" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "50+", label: "Happy Clients" },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
-                className="text-center group cursor-default"
-              >
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-teal-600 font-playfair transition-transform group-hover:scale-105">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-500 font-inter mt-1 sm:mt-2">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+          <div className="flex items-center justify-center gap-8 sm:gap-12 lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.9 }}
+              className="text-center"
+            >
+              <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-600 font-playfair">25+</span>
+              <span className="block text-xs sm:text-sm text-gray-500 font-inter mt-1">Years Experience</span>
+            </motion.div>
+            
+            <div className="w-px h-12 sm:h-14 bg-gray-300" />
+            
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 1.0 }}
+              className="text-center"
+            >
+              <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-600 font-playfair">200+</span>
+              <span className="block text-xs sm:text-sm text-gray-500 font-inter mt-1">Clients Served</span>
+            </motion.div>
           </div>
         </motion.div>
       </div>
