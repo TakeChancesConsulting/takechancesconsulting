@@ -1,6 +1,6 @@
 "use client";
 
-import { Linkedin, Mail } from "lucide-react";
+import {  Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -28,15 +28,6 @@ export default function Footer() {
                 aria-label="Email"
               >
                 <Mail className="w-4 h-4" />
-              </a>
-              <a 
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-teal-400 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
               </a>
             </div>
           </div>

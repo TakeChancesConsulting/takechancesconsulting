@@ -152,15 +152,6 @@ const jsonLd = {
     "HR Transformation",
     "Change Management",
   ],
-  sameAs: [
-    "https://linkedin.com/in/takechancesconsulting",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "hello@takechancesconsulting.com",
-    contactType: "customer service",
-    availableLanguage: "English",
-  },
 };
 
 export default function RootLayout({
