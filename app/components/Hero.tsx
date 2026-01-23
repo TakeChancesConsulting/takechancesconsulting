@@ -213,7 +213,7 @@ export default function Hero() {
               className="text-center"
             >
               <span className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-600 font-playfair">200+</span>
-              <span className="block text-xs sm:text-sm text-gray-500 font-inter mt-1">Clients Served</span>
+              <span className="block text-xs sm:text-sm text-gray-500 font-inter mt-1">Projects Delivered</span>
             </motion.div>
           </div>
         </motion.div>
