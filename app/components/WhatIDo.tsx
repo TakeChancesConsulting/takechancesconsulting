@@ -2,50 +2,69 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Building2, Sprout, Palette, ChevronDown, ArrowRight } from "lucide-react";
+import { Users, Layers, Cog, ChevronDown, ArrowRight } from "lucide-react";
 
 const services = [
   {
     number: "01",
-    title: "HR/People Foundations & Transformation",
-    description:
-      "Strong organisations are built on solid people foundations. I support leaders to design and strengthen core HR practices that are fit for purpose and aligned to their values — from setting up people frameworks and processes to practical, day-to-day HR support.",
-    extra:
-      "I also partner with established HR/People functions to develop their team(s) and redesign existing practices to transform the role of HR.",
-    Icon: Building2,
+    title: "Leadership & Organisational Effectiveness",
+    intro:
+      "Leadership alignment and organisational clarity are the foundations of performance.",
+    points: [
+      "Clarify priorities, roles, and accountabilities",
+      "Strengthen collective decision-making and leadership effectiveness",
+      "Improve cross-functional collaboration",
+      "Navigate complex people and organisational challenges",
+      "Align leadership behaviour and organisational expectations with strategy",
+    ],
+    outcome:
+      "Outcome: Leadership teams that are aligned, confident, and able to deliver strategy effectively.",
+    Icon: Users,
     color: "from-teal-400 to-teal-600",
     bgColor: "bg-teal-50",
     iconBg: "bg-teal-100",
     iconColor: "text-teal-600",
-    keywords: ["Frameworks", "Processes", "Day-to-day support", "Team development"],
+    keywords: ["Leadership", "Alignment", "Collaboration", "Decision-making"],
   },
   {
     number: "02",
-    title: "Leadership & Organisation Development",
-    description:
-      "Leadership and organisation development sit at the heart of my work. Drawing on 25 years of experience and an MSc in People & Organisation Development, I help organisations develop leaders, teams and systems that can adapt and scale.",
-    extra:
-      "This includes leadership development, organisational design, capability building and supporting leaders to lead through complexity and change.",
-    Icon: Sprout,
+    title: "Organisational Design & Change",
+    intro:
+      "Organisational change — whether driven by growth, restructuring, integration, or evolving strategy — always has cultural and behavioural implications.",
+    points: [
+      "Review and refine organisational structures and operating models",
+      "Facilitate leadership dialogue during periods of transition",
+      "Surface cultural dynamics and address limiting behaviours",
+      "Align systems, expectations, and accountability with strategic goals",
+      "Support leaders to embed sustainable organisational change",
+    ],
+    outcome:
+      "Outcome: Organisations where leadership, culture, and structure evolve together to support performance.",
+    Icon: Layers,
     color: "from-emerald-400 to-teal-500",
     bgColor: "bg-emerald-50",
     iconBg: "bg-emerald-100",
     iconColor: "text-emerald-600",
-    keywords: ["Leadership", "Org design", "Capability building", "Change"],
+    keywords: ["Org design", "Change", "Operating models", "Culture"],
   },
   {
     number: "03",
-    title: "Culture & Organisational Change",
-    description:
-      "Culture is shaped by what leaders pay attention to and how organisations behave day to day. I work with leadership teams to surface what's really happening in their culture and support meaningful change.",
-    extra:
-      "Whether through growth, transformation or transition — I help make culture visible and actionable.",
-    Icon: Palette,
+    title: "People & HR Capability",
+    intro:
+      "Strong leadership and organisational design require credible, aligned people systems.",
+    points: [
+      "Provide guidance on HR policies and frameworks that align with leadership priorities and culture",
+      "Build capability within HR and organisation development teams",
+      "Ensure people practices actively enable organisational performance",
+    ],
+    outcome:
+      "Outcome: People and HR systems that strengthen leadership, reinforce culture, and support organisational goals — without becoming operational HR work.",
+    Icon: Cog,
     color: "from-cyan-400 to-teal-500",
     bgColor: "bg-cyan-50",
     iconBg: "bg-cyan-100",
     iconColor: "text-cyan-600",
-    keywords: ["Culture mapping", "Transformation", "Transitions", "Growth"],
+    keywords: ["HR capability", "Policies", "People systems"],
   },
 ];
 
@@ -93,9 +112,9 @@ function ServiceCard({
           {service.title}
         </h3>
 
-        {/* Description */}
-        <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed mb-3 sm:mb-4 flex-grow">
-          {service.description}
+        {/* Intro */}
+        <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed mb-3 sm:mb-4">
+          {service.intro}
         </p>
 
         {/* Expandable content */}
@@ -108,9 +127,21 @@ function ServiceCard({
           transition={{ duration: 0.3 }}
           className="overflow-hidden"
         >
-          <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed mb-4 sm:mb-6 pt-2 border-t border-gray-200">
-            {service.extra}
-          </p>
+          <div className="pt-2 border-t border-gray-200">
+            <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 mb-3 sm:mb-4">
+              {service.points.map((point) => (
+                <li
+                  key={point}
+                  className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed"
+                >
+                  {point}
+                </li>
+              ))}
+            </ul>
+            <p className="text-sm sm:text-base text-gray-700 font-inter font-medium">
+              {service.outcome}
+            </p>
+          </div>
         </motion.div>
 
         {/* Keywords */}
@@ -208,9 +239,8 @@ export default function WhatIDo() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-base sm:text-xl text-gray-600 font-inter"
           >
-            Three interconnected areas where I help organisations and their
-            leaders thrive. <span className="text-teal-600">Tap each card</span> to
-            learn more.
+            I support organisations across three interconnected areas of leadership, organisational design, and people systems.{" "}
+            <span className="text-teal-600">Tap each card</span> to explore how this comes to life in practice.
           </motion.p>
         </div>
 

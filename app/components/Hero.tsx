@@ -73,35 +73,47 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 text-gray-900"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-4 sm:mb-6 text-gray-900"
             >
-              Rethink HR &
+              Leadership. Culture.
               <br />
-              People Strategies.
-              <br />
-              <span className="relative inline-block mt-1 sm:mt-2">
-                <span className="relative z-10 text-teal-600">
-                  Take Chances.
-                </span>
-                <motion.span
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.8, delay: 0.7 }}
-                  className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-teal-600 origin-left rounded-full"
-                />
-              </span>
+              Organisations that Work.
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-base sm:text-lg md:text-xl text-gray-600 font-inter max-w-xl mb-6 sm:mb-10 leading-relaxed"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-base sm:text-lg md:text-xl text-gray-700 font-inter max-w-xl mb-4 leading-relaxed"
             >
-              Expert consulting services designed to help you navigate challenges,
-              seize opportunities, and achieve{" "}
-              <span className="text-teal-600 font-medium">extraordinary results</span>.
+              Helping leaders align strategy, culture, and people systems during growth and change.
+            </motion.p>
+
+            {/* Supporting copy */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-sm sm:text-base md:text-lg text-gray-600 font-inter max-w-xl mb-3 leading-relaxed"
+            >
+              Organisations today are navigating growth, restructuring, integration, digital change, and evolving workforce expectations. I advise leaders and people teams on how leadership capability, organisational structures, and people systems need to evolve so organisations can deliver sustainable performance.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-sm sm:text-base md:text-lg text-gray-600 font-inter max-w-xl mb-3 leading-relaxed"
+            >
+              While I sometimes provide guidance on HR policies and frameworks, my primary focus is helping leaders align culture, structure, and strategy to drive organisational impact.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="text-sm sm:text-base md:text-lg text-gray-600 font-inter max-w-xl mb-8 sm:mb-10 leading-relaxed"
+            >
+              I typically work with a small number of organisations at a time, partnering closely with leadership teams as a trusted advisor through periods of growth, change, or organisational evolution.
             </motion.p>
 
             {/* CTA Buttons */}

@@ -1,7 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb, Target, Rocket } from "lucide-react";
+import { CheckCircle } from "lucide-react";
+
+const trackRecord = [
+  "Leading organisational redesign, post-merger integrations, and restructures within large and mid-sized organisations",
+  "Supporting leadership and culture development alongside organisational change and growth",
+  "Managing global and regional HR operations and leading HR operating model evolution",
+  "Leading organisation development, DEI, and philanthropy functions",
+];
 
 export default function WhyTakeChances() {
   return (
@@ -58,19 +65,14 @@ export default function WhyTakeChances() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6 sm:mb-10"
+              className="mb-6 sm:mb-8"
             >
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-playfair text-gray-800 leading-relaxed">
-                People and organisational challenges are{" "}
-                <span className="relative inline-block">
-                  <span className="relative z-10">rarely solved</span>
-                  <span className="absolute bottom-0.5 sm:bottom-1 left-0 right-0 h-2 sm:h-3 bg-teal-200/50 -rotate-1" />
-                </span>{" "}
-                by standard solutions alone.
+              <p className="text-lg sm:text-xl md:text-2xl font-playfair text-gray-800 leading-relaxed">
+                I work with organisations of all sizes — from fast-growing businesses to global enterprises — helping leaders align strategy, structure, culture, and people systems to deliver sustainable performance.
               </p>
             </motion.div>
 
-            {/* Supporting text */}
+            {/* Philosophy paragraph */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,15 +80,11 @@ export default function WhyTakeChances() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="space-y-4 sm:space-y-6"
             >
-              <p className="text-base sm:text-lg text-gray-600 font-inter leading-relaxed max-w-2xl">
-                At Take Chances, I work from the belief that sustainable organisations 
-                are built when leaders are willing to{" "}
-                <span className="text-teal-700 font-medium">pause</span>,{" "}
-                <span className="text-teal-700 font-medium">reflect</span> and{" "}
-                <span className="text-teal-700 font-medium">think differently</span>.
+              <p className="text-base sm:text-lg text-gray-600 font-inter leading-relaxed">
+                The name Take Chances reflects my style and philosophy. Meaningful organisational change often requires trying something different and having the honest conversations that enable progress. My role is to help leaders navigate these moments with clarity, structure, and practical solutions.
               </p>
 
-              {/* Quote-style callout */}
+              {/* Why organisations choose */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -94,51 +92,55 @@ export default function WhyTakeChances() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="relative pl-4 sm:pl-6 py-3 sm:py-4 border-l-4 border-teal-400 bg-gradient-to-r from-teal-50/80 to-transparent rounded-r-lg"
               >
-                <p className="text-base sm:text-lg md:text-xl text-gray-700 font-inter italic">
-                  &ldquo;Taking chances doesn&apos;t mean taking unnecessary risks. It means being 
-                  <span className="not-italic font-semibold text-teal-700"> curious</span>, 
-                  <span className="not-italic font-semibold text-teal-700"> challenging assumptions</span>, and making 
-                  <span className="not-italic font-semibold text-teal-700"> intentional choices</span> about how 
-                  people, culture and organisations evolve.&rdquo;
+                <p className="text-base sm:text-lg text-gray-700 font-inter">
+                  Organisations choose Take Chances Consulting because I combine{" "}
+                  <span className="font-semibold text-teal-700">strategic insight</span>,{" "}
+                  <span className="font-semibold text-teal-700">operational experience</span>, and{" "}
+                  <span className="font-semibold text-teal-700">pragmatic delivery</span>.
                 </p>
               </motion.div>
-
-              <p className="text-base sm:text-lg text-gray-600 font-inter leading-relaxed max-w-2xl">
-                My role is to bring perspective, experience and thoughtful challenge — 
-                helping leaders take informed chances that support{" "}
-                <span className="inline-flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                  <span className="font-semibold text-gray-800">growth</span>
-                  <span className="text-teal-400">•</span>
-                  <span className="font-semibold text-gray-800">resilience</span>
-                  <span className="text-teal-400">•</span>
-                  <span className="font-semibold text-gray-800">long-term success</span>
-                </span>
-              </p>
             </motion.div>
 
-            {/* Visual element with icons */}
+            {/* Track record */}
             <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="mt-8 sm:mt-10"
+            >
+              <p className="text-base sm:text-lg font-semibold text-gray-800 font-inter mb-4">
+                My experience includes:
+              </p>
+              <ul className="space-y-3 sm:space-y-4">
+                {trackRecord.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                    className="flex items-start gap-3"
+                  >
+                    <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed">
+                      {item}
+                    </span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Closing statement */}
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-8 sm:mt-12 flex items-center gap-3 sm:gap-4"
+              transition={{ duration: 0.5, delay: 0.9 }}
+              className="mt-8 sm:mt-10 text-base sm:text-lg text-gray-600 font-inter leading-relaxed"
             >
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal-100 border-2 border-white flex items-center justify-center">
-                  <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-teal-600" strokeWidth={1.5} />
-                </div>
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal-200 border-2 border-white flex items-center justify-center">
-                  <Target className="w-4 h-4 sm:w-5 sm:h-5 text-teal-700" strokeWidth={1.5} />
-                </div>
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal-300 border-2 border-white flex items-center justify-center">
-                  <Rocket className="w-4 h-4 sm:w-5 sm:h-5 text-teal-800" strokeWidth={1.5} />
-                </div>
-              </div>
-              <p className="text-xs sm:text-sm text-gray-500 font-inter">
-                From insight to action — let&apos;s make it happen.
-              </p>
-            </motion.div>
+              Every engagement begins with structured diagnosis and collaborative design, ensuring solutions are proportionate, practical, and sustainable.
+            </motion.p>
           </div>
         </div>
       </div>

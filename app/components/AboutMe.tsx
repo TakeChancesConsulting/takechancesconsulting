@@ -37,14 +37,16 @@ export default function AboutMe() {
           >
             <Image
               src="/about-me.jpg"
-              alt="HR consultant with 25+ years of experience in people strategy, leadership development, and organisational transformation"
+              alt="Consultant supporting leaders with organisational and people challenges"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-transparent to-transparent" />
             <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6">
-              <p className="text-white font-playfair text-lg sm:text-xl lg:text-2xl">Rethink HR & People Strategies. Take Chances.</p>
+              <p className="text-white font-playfair text-lg sm:text-xl lg:text-2xl">
+                Leadership. Culture. Organisations that Work.
+              </p>
             </div>
             {/* Fallback */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-700 -z-10" />
@@ -91,21 +93,19 @@ export default function AboutMe() {
             transition={{ duration: 0.4, delay: 0.2 }}
             className="col-span-1 sm:col-span-2 lg:col-span-7 row-span-1 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-gray-200"
           >
-            <p className="text-base sm:text-xl lg:text-2xl text-gray-700 font-inter leading-relaxed mb-4 sm:mb-6">
-              My career has spanned{" "}
-              <span className="text-teal-600 font-medium">HR business partnering</span>,{" "}
-              <span className="text-teal-600 font-medium">people and organisation development</span>,{" "}
-              <span className="text-teal-600 font-medium">talent management</span>,{" "}
-              <span className="text-teal-600 font-medium">HR transformation</span>,{" "}
-              <span className="text-teal-600 font-medium">organisational culture change</span> and{" "}
-              <span className="text-teal-600 font-medium">leadership development</span>.
-            </p>
-            <div className="flex flex-wrap gap-1.5 sm:gap-2">
-              {["HR Partnering", "Org Development", "Talent Management", "Transformation", "Leadership"].map((tag) => (
-                <span key={tag} className="px-2.5 sm:px-4 py-1.5 sm:py-2 bg-gray-100 rounded-full text-xs sm:text-sm text-gray-600 font-inter">
-                  {tag}
-                </span>
-              ))}
+            <div className="space-y-3 sm:space-y-4">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-700 font-inter leading-relaxed">
+                After 25 years working in organisations across Europe and globally, I founded Take Chances Consulting to help leaders navigate complex organisational and people challenges.
+              </p>
+              <p className="text-base sm:text-lg lg:text-xl text-gray-700 font-inter leading-relaxed">
+                I have held senior roles leading global and regional HR operations, organisational redesign, and change initiatives, and have managed organisation development, DEI, and philanthropy functions.
+              </p>
+              <p className="text-base sm:text-lg lg:text-xl text-gray-700 font-inter leading-relaxed">
+                I have worked with organisations including Tektronix, Xerox, WaveOptics, and Zebra, across large enterprises, fast-growing scale-ups, and mid-sized organisations.
+              </p>
+              <p className="text-base sm:text-lg lg:text-xl text-gray-700 font-inter leading-relaxed">
+                Having experienced first-hand that organisational change is fundamentally psychological as well as operational, I am passionate about helping leaders translate this insight into sustainable growth — recognising that people and business outcomes must evolve together.
+              </p>
             </div>
           </motion.div>
 
@@ -163,9 +163,7 @@ export default function AboutMe() {
               </div>
               
               <p className="text-base sm:text-xl lg:text-2xl leading-relaxed">
-                I invest in <span className="text-teal-400">social enterprises</span> that widen 
-                access to meaningful work. I&apos;m passionate about supporting people who&apos;ve 
-                been out of the workforce to find new opportunities. Contact me if you are interested in mentoring and outreach organisations that I work with
+                I am a fully qualified CIPD member and hold an MSc in People and Organisation Development. I draw on this combination of practical experience and formal expertise to deliver structured, pragmatic, and sustainable solutions.
               </p>
               
             </div>

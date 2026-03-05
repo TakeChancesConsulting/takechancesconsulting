@@ -3,24 +3,6 @@
 import { motion } from "framer-motion";
 import { Handshake, Brain, Sparkles, ArrowRight, Heart, Zap } from "lucide-react";
 
-const approaches = [
-  {
-    icon: Handshake,
-    title: "Partnership",
-    description: "Working alongside you, not above you",
-  },
-  {
-    icon: Brain,
-    title: "Pragmatic",
-    description: "Grounded in business reality",
-  },
-  {
-    icon: Heart,
-    title: "Human",
-    description: "People-first, always",
-  },
-];
-
 export default function HowIWork() {
   return (
     <section id="how-i-work" className="relative py-16 sm:py-24 lg:py-32 overflow-hidden bg-white">
@@ -82,25 +64,12 @@ export default function HowIWork() {
 
               <div className="relative z-10">
                 <p className="text-xl sm:text-2xl md:text-3xl font-playfair leading-relaxed mb-5 sm:mb-8">
-                  &ldquo;I work with business leaders, founders, HR leaders and their teams, as an independent consultant.&rdquo;
+                  Every engagement begins with structured diagnosis to ensure support is targeted and effective.
                 </p>
 
-                {/* Approach pills */}
-                <div className="flex flex-wrap gap-2 sm:gap-3">
-                  {approaches.map((approach, index) => (
-                    <motion.div
-                      key={approach.title}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-                      className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-white/20 backdrop-blur-sm rounded-full"
-                    >
-                      <approach.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={2} />
-                      <span className="font-inter text-xs sm:text-sm font-medium">{approach.title}</span>
-                    </motion.div>
-                  ))}
-                </div>
+                <p className="text-sm sm:text-base font-inter text-teal-50/90 leading-relaxed">
+                  From there, we co-design and embed practical interventions that build internal capability and sustain change.
+                </p>
               </div>
 
               {/* Decorative corner */}
@@ -133,63 +102,47 @@ export default function HowIWork() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-5 sm:space-y-8 mt-8 sm:mt-0"
+            className="space-y-6 sm:space-y-8 mt-8 sm:mt-0"
           >
-            <p className="text-base sm:text-xl text-gray-600 font-inter leading-relaxed">
-              I offer a{" "}
-              <span className="font-semibold text-gray-900">hands-on</span>,{" "}
-              <span className="font-semibold text-gray-900">pragmatic</span> and{" "}
-              <span className="font-semibold text-gray-900">human</span> approach — 
-              combining deep people expertise with fresh perspectives.
-            </p>
-
-            {/* Support & Challenge */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 }}
-                className="bg-teal-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-teal-100"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-teal-100 flex items-center justify-center mb-3 sm:mb-4">
-                  <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-teal-600" strokeWidth={1.5} />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-sm sm:text-base">Support</h4>
-                <p className="text-xs sm:text-sm text-gray-600 font-inter">
-                  Creating space for reflection and encouraging different thinking
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.4 }}
-                className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-200"
-              >
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gray-200 flex items-center justify-center mb-3 sm:mb-4">
-                  <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" strokeWidth={1.5} />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-sm sm:text-base">Challenge</h4>
-                <p className="text-xs sm:text-sm text-gray-600 font-inter">
-                  Helping leaders move from insight to action
-                </p>
-              </motion.div>
+            {/* Discovery & Diagnosis */}
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-200">
+              <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
+                <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-teal-600" />
+                Discovery &amp; Diagnosis
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed">
+                Understanding context, uncovering underlying challenges, and identifying the key leverage points for change.
+              </p>
             </div>
 
-            <p className="text-sm sm:text-lg text-gray-600 font-inter leading-relaxed">
-              My work is grounded in{" "}
-              <span className="text-teal-600 font-medium">evidence-based people and organisation development</span>, 
-              but always shaped by the reality of running a business.
-            </p>
+            {/* Co-Designed Interventions */}
+            <div className="bg-teal-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-teal-100">
+              <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
+                <Handshake className="w-4 h-4 sm:w-5 sm:h-5 text-teal-700" />
+                Co-Designed Interventions
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed">
+                Shaping solutions collaboratively with leaders, focusing on leadership effectiveness, organisational design, and people systems.
+              </p>
+            </div>
+
+            {/* Embedding & Capability Building */}
+            <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-200">
+              <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3">
+                <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800" />
+                Embedding &amp; Capability Building
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 font-inter leading-relaxed">
+                Supporting practical implementation and ensuring organisations build internal capability for sustainable change.
+              </p>
+            </div>
 
             <motion.a
               href="#contact"
               whileHover={{ x: 5 }}
               className="inline-flex items-center gap-2 text-teal-600 font-inter font-semibold group text-sm sm:text-base"
             >
-              Let&apos;s talk about your challenges
+              Let&apos;s talk about how this could support your organisation
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
             </motion.a>
           </motion.div>
