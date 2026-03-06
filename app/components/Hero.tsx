@@ -73,12 +73,30 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-4 sm:mb-6 text-gray-900"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] mb-2 sm:mb-3 text-gray-900"
             >
               Leadership. Culture.
               <br />
               Organisations that Work.
             </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mb-4 sm:mb-6"
+            >
+              <span className="relative inline-block mt-1 sm:mt-2">
+                <span className="relative z-10 text-teal-600 text-xl sm:text-2xl md:text-3xl font-semibold">
+                  Take Chances.
+                </span>
+                <motion.span
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-teal-400 to-teal-600 origin-left rounded-full"
+                />
+              </span>
+            </motion.div>
 
             {/* Subtitle */}
             <motion.p
