@@ -77,13 +77,13 @@ export default function Contact() {
 
             {/* Email */}
             <a 
-              href="mailto:shelley.eades@icloud.com"
+              href="mailto:shelley@takechancesconsulting.com"
               className="inline-flex items-center gap-2 sm:gap-3 text-white hover:text-teal-400 transition-colors group"
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal-500/20 flex items-center justify-center group-hover:bg-teal-500/30 transition-colors">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
-              <span className="font-inter text-sm sm:text-base break-all sm:break-normal">shelley.eades@icloud.com</span>
+              <span className="font-inter text-sm sm:text-base break-all sm:break-normal">shelley@takechancesconsulting.com</span>
             </a>
           </motion.div>
 
